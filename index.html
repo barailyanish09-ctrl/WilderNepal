@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Wilder Nepal — Adventure Awaits</title>
+  <link rel="stylesheet" href="style.css" />
+  <!-- Google Fonts: Cormorant Garamond + DM Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,400;1,600&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <!-- Phosphor Icons -->
+  <script src="https://unpkg.com/@phosphor-icons/web@2.1.1/src/index.js" defer></script>
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════════
+     TOP NAVIGATION
+═══════════════════════════════════════════ -->
+<header id="main-header">
+  <nav class="navbar">
+    <!-- Logo -->
+    <a href="#" class="logo" data-page="home">
+      <span class="logo-wild">Wilder</span>
+      <span class="logo-nepal">Nepal</span>
+      <span class="logo-dot">●</span>
+    </a>
+
+    <!-- Desktop Nav Links -->
+    <ul class="nav-links" id="nav-links">
+      <li><a href="#" class="nav-link active" data-page="home">Home</a></li>
+      <li><a href="#" class="nav-link" data-page="about">About</a></li>
+      <li><a href="#" class="nav-link" data-page="destinations">Destinations</a></li>
+      <li><a href="#" class="nav-link" data-page="blog">Blog</a></li>
+      <li><a href="#" class="nav-link" data-page="contact">Contact</a></li>
+    </ul>
+
+    <!-- Right Controls -->
+    <div class="nav-actions">
+      <!-- Dark Mode Toggle -->
+      <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">
+        <i class="ph ph-sun" id="theme-icon"></i>
+      </button>
+      <!-- Login Button -->
+      <button class="btn-login" id="btn-open-login">Log In</button>
+      <!-- Hamburger -->
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+  <!-- Mobile Nav Drawer -->
+  <div class="mobile-nav" id="mobile-nav">
+    <a href="#" class="nav-link" data-page="home">Home</a>
+    <a href="#" class="nav-link" data-page="about">About</a>
+    <a href="#" class="nav-link" data-page="destinations">Destinations</a>
+    <a href="#" class="nav-link" data-page="blog">Blog</a>
+    <a href="#" class="nav-link" data-page="contact">Contact</a>
+    <button class="btn-login" id="btn-open-login-mobile">Log In</button>
+  </div>
+</header>
+
+<!-- ═══════════════════════════════════════════
+     SIDEBAR (Desktop Sticky)
+═══════════════════════════════════════════ -->
+<aside class="sidebar" id="sidebar">
+  <div class="sidebar-logo">WN</div>
+  <nav class="sidebar-nav">
+    <a href="#" class="sidebar-link active" data-page="home" title="Home"><i class="ph ph-house"></i></a>
+    <a href="#" class="sidebar-link" data-page="about" title="About"><i class="ph ph-user"></i></a>
+    <a href="#" class="sidebar-link" data-page="destinations" title="Destinations"><i class="ph ph-mountains"></i></a>
+    <a href="#" class="sidebar-link" data-page="blog" title="Blog"><i class="ph ph-newspaper"></i></a>
+    <a href="#" class="sidebar-link" data-page="contact" title="Contact"><i class="ph ph-envelope"></i></a>
+  </nav>
+  <div class="sidebar-social">
+    <a href="#" aria-label="Instagram"><i class="ph ph-instagram-logo"></i></a>
+    <a href="#" aria-label="Facebook"><i class="ph ph-facebook-logo"></i></a>
+    <a href="#" aria-label="YouTube"><i class="ph ph-youtube-logo"></i></a>
+  </div>
+</aside>
+
+<!-- ═══════════════════════════════════════════
+     PAGE: HOME
+═══════════════════════════════════════════ -->
+<main id="page-home" class="page active">
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-bg">
+      <img src="https://images.unsplash.com/photo-1544735716-392fe2489ffa?w=1800&auto=format&fit=crop&q=80" alt="Nepal Mountains" class="hero-img" />
+      <div class="hero-overlay"></div>
+    </div>
+    <div class="hero-content">
+      <span class="hero-eyebrow">Discover the Himalayas</span>
+      <h1 class="hero-title">
+        Go<br/>
+        <em>Wilder.</em>
+      </h1>
+      <p class="hero-subtitle">Personal travel stories and guides from the rooftop of the world. Nepal, unfiltered.</p>
+      <div class="hero-actions">
+        <button class="btn-primary" data-page="destinations">Explore Destinations</button>
+        <button class="btn-ghost" data-page="blog">Read Stories</button>
+      </div>
+    </div>
+    <!-- Scroll Indicator -->
+    <div class="scroll-indicator">
+      <span>Scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+    <!-- Hero Stats -->
+    <div class="hero-stats">
+      <div class="stat"><span class="stat-num">5+</span><span class="stat-label">Destinations</span></div>
+      <div class="stat"><span class="stat-num">3,000m+</span><span class="stat-label">Avg Altitude</span></div>
+      <div class="stat"><span class="stat-num">100%</span><span class="stat-label">Wild Experience</span></div>
+    </div>
+  </section>
+
+  <!-- Search Bar -->
+  <section class="search-section">
+    <div class="search-wrapper">
+      <i class="ph ph-magnifying-glass"></i>
+      <input type="text" id="home-search" placeholder="Search destinations, treks, places…" />
+      <button class="search-btn">Search</button>
+    </div>
+  </section>
+
+  <!-- Featured Destinations -->
+  <section class="section featured-section">
+    <div class="section-header">
+      <span class="section-tag">Where to Go</span>
+      <h2 class="section-title">Featured Destinations</h2>
+      <p class="section-sub">Hand-picked locations across Nepal, from Himalayan heights to ancient lowlands.</p>
+    </div>
+    <div class="destinations-grid" id="featured-grid">
+      <!-- Injected by JS -->
+    </div>
+    <div class="section-footer">
+      <button class="btn-outline" data-page="destinations">View All Destinations <i class="ph ph-arrow-right"></i></button>
+    </div>
+  </section>
+
+  <!-- Why Nepal Banner -->
+  <section class="why-nepal">
+    <div class="why-img">
+      <img src="https://images.unsplash.com/photo-1605640840605-14ac1855827b?w=900&auto=format&fit=crop&q=80" alt="Nepal culture" />
+    </div>
+    <div class="why-content">
+      <span class="section-tag">Why Nepal?</span>
+      <h2>More than mountains.</h2>
+      <p>Nepal is a tapestry of soaring peaks, ancient temples, wild jungles, and warm smiles. Whether you're a hardcore trekker or a curious wanderer, Nepal has a path for you.</p>
+      <ul class="why-list">
+        <li><i class="ph ph-check-circle"></i> 8 of the world's 14 highest peaks</li>
+        <li><i class="ph ph-check-circle"></i> UNESCO World Heritage Sites</li>
+        <li><i class="ph ph-check-circle"></i> Rich cultural diversity — 100+ ethnic groups</li>
+        <li><i class="ph ph-check-circle"></i> One of the most affordable travel destinations</li>
+      </ul>
+      <a href="#" class="btn-primary" data-page="about">About This Blog</a>
+    </div>
+  </section>
+
+  <!-- Latest Blog Posts -->
+  <section class="section blog-preview">
+    <div class="section-header">
+      <span class="section-tag">From the Trail</span>
+      <h2 class="section-title">Latest Stories</h2>
+    </div>
+    <div class="blog-grid" id="blog-preview-grid">
+      <!-- Injected by JS -->
+    </div>
+    <div class="section-footer">
+      <button class="btn-outline" data-page="blog">All Stories <i class="ph ph-arrow-right"></i></button>
+    </div>
+  </section>
+
+  <!-- Travel Guide Download -->
+  <section class="guide-banner">
+    <div class="guide-content">
+      <i class="ph ph-book-open-text guide-icon"></i>
+      <h3>Free Nepal Travel Guide</h3>
+      <p>Download our comprehensive guide covering visas, trekking permits, best seasons, and packing essentials.</p>
+      <a href="#" class="btn-primary" download>
+        <i class="ph ph-download-simple"></i> Download Free PDF
+      </a>
+    </div>
+    <div class="guide-bg-text">GUIDE</div>
+  </section>
+
+  <!-- Newsletter -->
+  <section class="newsletter">
+    <h3>Stay on the trail with us.</h3>
+    <p>Monthly dispatches from the mountains — no spam, just stories.</p>
+    <form class="newsletter-form" id="newsletter-form">
+      <input type="email" placeholder="your@email.com" required />
+      <button type="submit">Subscribe</button>
+    </form>
+    <span class="newsletter-note">Join 2,000+ fellow adventurers. Unsubscribe anytime.</span>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <span class="logo-wild">Wilder</span><span class="logo-nepal">Nepal</span>
+        <p>A personal travel brand celebrating the wild beauty of Nepal.</p>
+        <div class="social-icons">
+          <a href="#" aria-label="Instagram"><i class="ph ph-instagram-logo"></i></a>
+          <a href="#" aria-label="Facebook"><i class="ph ph-facebook-logo"></i></a>
+          <a href="#" aria-label="YouTube"><i class="ph ph-youtube-logo"></i></a>
+          <a href="#" aria-label="Pinterest"><i class="ph ph-pinterest-logo"></i></a>
+        </div>
+      </div>
+      <div class="footer-links">
+        <h4>Explore</h4>
+        <a href="#" data-page="destinations">Destinations</a>
+        <a href="#" data-page="blog">Blog</a>
+        <a href="#" data-page="about">About</a>
+        <a href="#" data-page="contact">Contact</a>
+      </div>
+      <div class="footer-links">
+        <h4>Resources</h4>
+        <a href="#">Travel Guide PDF</a>
+        <a href="#">Trekking Permits</a>
+        <a href="#">Visa Info</a>
+        <a href="#">Best Season</a>
+      </div>
+      <div class="footer-links">
+        <h4>Connect</h4>
+        <a href="#">Newsletter</a>
+        <a href="#">Instagram</a>
+        <a href="#">YouTube</a>
+        <a href="#">Collaborate</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 Wilder Nepal. Made with ❤️ from the foothills.</p>
+    </div>
+  </footer>
+</main>
+
+<!-- ═══════════════════════════════════════════
+     PAGE: ABOUT
+═══════════════════════════════════════════ -->
+<main id="page-about" class="page">
+  <section class="page-hero about-hero">
+    <img src="https://images.unsplash.com/photo-1585016495481-91613ec03b71?w=1600&auto=format&fit=crop&q=80" alt="About Nepal" />
+    <div class="page-hero-overlay">
+      <span class="section-tag">Our Story</span>
+      <h1>About Wilder Nepal</h1>
+    </div>
+  </section>
+
+  <section class="about-content section">
+    <div class="about-grid">
+      <div class="about-text">
+        <h2>Hi, I'm Priya. <em>Welcome to my Nepal.</em></h2>
+        <p>Wilder Nepal started as a collection of trail notes scribbled in a beaten notebook somewhere between Namche Bazaar and Dingboche. It grew into this — a space to share every raw, beautiful, difficult, and transcendent moment Nepal has given me.</p>
+        <p>I'm a Kathmandu-based writer and avid trekker with ten years of exploring Nepal's mountains, jungles, and cultural valleys. I believe in slow travel, authentic experiences, and telling stories that go beyond the postcard.</p>
+        <p>This blog is for curious souls who want the real Nepal — not a curated package tour, but a genuine adventure.</p>
+        <div class="about-stats">
+          <div class="a-stat"><strong>10+</strong><span>Years Exploring</span></div>
+          <div class="a-stat"><strong>80+</strong><span>Treks Completed</span></div>
+          <div class="a-stat"><strong>30+</strong><span>Articles Written</span></div>
+        </div>
+      </div>
+      <div class="about-img-wrap">
+        <img src="https://images.unsplash.com/photo-1578681994506-b8f463449011?w=600&auto=format&fit=crop&q=80" alt="Traveler in Nepal" class="about-photo" />
+        <div class="about-badge">
+          <i class="ph ph-mountains"></i>
+          <span>Based in Kathmandu</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="mission-strip">
+      <div class="mission-item">
+        <i class="ph ph-compass"></i>
+        <h4>Authentic Stories</h4>
+        <p>Real experiences, no sponsorships disguised as opinions.</p>
+      </div>
+      <div class="mission-item">
+        <i class="ph ph-leaf"></i>
+        <h4>Responsible Travel</h4>
+        <p>Leave no trace. Support local communities and businesses.</p>
+      </div>
+      <div class="mission-item">
+        <i class="ph ph-map-trifold"></i>
+        <h4>Practical Guides</h4>
+        <p>Actionable tips on permits, costs, routes, and logistics.</p>
+      </div>
+    </div>
+  </section>
+  <footer class="footer">
+    <div class="footer-bottom"><p>© 2025 Wilder Nepal. Made with ❤️ from the foothills.</p></div>
+  </footer>
+</main>
+
+<!-- ═══════════════════════════════════════════
+     PAGE: DESTINATIONS
+═══════════════════════════════════════════ -->
+<main id="page-destinations" class="page">
+  <section class="page-hero dest-hero">
+    <img src="https://images.unsplash.com/photo-1571401835393-8c5f35328320?w=1600&auto=format&fit=crop&q=80" alt="Nepal destinations" />
+    <div class="page-hero-overlay">
+      <span class="section-tag">Explore Nepal</span>
+      <h1>Destinations</h1>
+      <p>From Himalayan peaks to lush terai forests.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="dest-controls">
+      <div class="dest-search-wrap">
+        <i class="ph ph-magnifying-glass"></i>
+        <input type="text" id="dest-search" placeholder="Search destinations…" />
+      </div>
+      <div class="dest-filters">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="trek">Trekking</button>
+        <button class="filter-btn" data-filter="nature">Nature</button>
+        <button class="filter-btn" data-filter="culture">Culture</button>
+        <button class="filter-btn" data-filter="wildlife">Wildlife</button>
+      </div>
+    </div>
+    <div class="destinations-grid" id="all-destinations-grid">
+      <!-- Injected by JS -->
+    </div>
+  </section>
+  <footer class="footer">
+    <div class="footer-bottom"><p>© 2025 Wilder Nepal. Made with ❤️ from the foothills.</p></div>
+  </footer>
+</main>
+
+<!-- ═══════════════════════════════════════════
+     PAGE: DESTINATION DETAIL
+═══════════════════════════════════════════ -->
+<main id="page-detail" class="page">
+  <div id="detail-content">
+    <!-- Injected by JS when a destination card is clicked -->
+  </div>
+</main>
+
+<!-- ═══════════════════════════════════════════
+     PAGE: BLOG
+═══════════════════════════════════════════ -->
+<main id="page-blog" class="page">
+  <section class="page-hero blog-hero">
+    <img src="https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=1600&auto=format&fit=crop&q=80" alt="Nepal blog" />
+    <div class="page-hero-overlay">
+      <span class="section-tag">From the Trail</span>
+      <h1>Stories & Guides</h1>
+      <p>Personal dispatches from Nepal's wild places.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="blog-full-grid" id="blog-full-grid">
+      <!-- Injected by JS -->
+    </div>
+  </section>
+  <footer class="footer">
+    <div class="footer-bottom"><p>© 2025 Wilder Nepal. Made with ❤️ from the foothills.</p></div>
+  </footer>
+</main>
+
+<!-- ═══════════════════════════════════════════
+     PAGE: CONTACT
+═══════════════════════════════════════════ -->
+<main id="page-contact" class="page">
+  <section class="page-hero contact-hero">
+    <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1600&auto=format&fit=crop&q=80" alt="Contact" />
+    <div class="page-hero-overlay">
+      <span class="section-tag">Get in Touch</span>
+      <h1>Contact</h1>
+    </div>
+  </section>
+
+  <section class="section contact-section">
+    <div class="contact-grid">
+      <!-- Contact Info -->
+      <div class="contact-info">
+        <h3>Let's talk travel.</h3>
+        <p>Have a question about Nepal, want to collaborate, or just want to share your own Nepal story? I'd love to hear from you.</p>
+        <div class="contact-item">
+          <i class="ph ph-envelope-simple"></i>
+          <span>hello@wildernepal.com</span>
+        </div>
+        <div class="contact-item">
+          <i class="ph ph-map-pin"></i>
+          <span>Kathmandu, Nepal</span>
+        </div>
+        <div class="contact-item">
+          <i class="ph ph-instagram-logo"></i>
+          <span>@wildernepal</span>
+        </div>
+        <div class="contact-download">
+          <a href="#" class="btn-outline">
+            <i class="ph ph-download-simple"></i> Download Travel Guide
+          </a>
+        </div>
+      </div>
+
+      <!-- Contact Form -->
+      <div class="contact-form-wrap">
+        <form class="contact-form" id="contact-form">
+          <div class="form-row">
+            <div class="form-group">
+              <label>Name</label>
+              <input type="text" placeholder="Your name" required />
+            </div>
+            <div class="form-group">
+              <label>Email</label>
+              <input type="email" placeholder="your@email.com" required />
+            </div>
+          </div>
+          <div class="form-group">
+            <label>Subject</label>
+            <select>
+              <option>General Inquiry</option>
+              <option>Trekking Advice</option>
+              <option>Collaboration</option>
+              <option>Guest Post</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Message</label>
+            <textarea rows="6" placeholder="Tell me about your Nepal plans…" required></textarea>
+          </div>
+          <button type="submit" class="btn-primary">Send Message <i class="ph ph-paper-plane-tilt"></i></button>
+        </form>
+      </div>
+    </div>
+  </section>
+  <footer class="footer">
+    <div class="footer-bottom"><p>© 2025 Wilder Nepal. Made with ❤️ from the foothills.</p></div>
+  </footer>
+</main>
+
+<!-- ═══════════════════════════════════════════
+     MODAL: LOGIN / SIGNUP
+═══════════════════════════════════════════ -->
+<div class="modal-overlay" id="auth-modal">
+  <div class="modal-box">
+    <button class="modal-close" id="modal-close"><i class="ph ph-x"></i></button>
+    <!-- Tabs -->
+    <div class="auth-tabs">
+      <button class="auth-tab active" data-tab="login">Log In</button>
+      <button class="auth-tab" data-tab="signup">Sign Up</button>
+    </div>
+
+    <!-- Login Form -->
+    <div class="auth-form active" id="tab-login">
+      <h3>Welcome back.</h3>
+      <p>Sign in to save trips and follow stories.</p>
+      <form>
+        <div class="form-group">
+          <label>Email</label>
+          <input type="email" placeholder="your@email.com" />
+        </div>
+        <div class="form-group">
+          <label>Password</label>
+          <input type="password" placeholder="••••••••" />
+        </div>
+        <button type="submit" class="btn-primary full">Log In</button>
+        <p class="auth-switch">Don't have an account? <a href="#" data-tab-switch="signup">Sign Up</a></p>
+      </form>
+    </div>
+
+    <!-- Signup Form -->
+    <div class="auth-form" id="tab-signup">
+      <h3>Join the journey.</h3>
+      <p>Create an account to save your favorite destinations.</p>
+      <form>
+        <div class="form-group">
+          <label>Full Name</label>
+          <input type="text" placeholder="Your name" />
+        </div>
+        <div class="form-group">
+          <label>Email</label>
+          <input type="email" placeholder="your@email.com" />
+        </div>
+        <div class="form-group">
+          <label>Password</label>
+          <input type="password" placeholder="Create a password" />
+        </div>
+        <button type="submit" class="btn-primary full">Create Account</button>
+        <p class="auth-switch">Already have an account? <a href="#" data-tab-switch="login">Log In</a></p>
+      </form>
+    </div>
+  </div>
+</div>
+
+<!-- Toast Notification -->
+<div class="toast" id="toast"></div>
+
+<script src="script.js"></script>
+</body>
+</html>
